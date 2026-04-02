@@ -36,3 +36,20 @@ Codex/agents MUST follow these rules when operating in this repository.
 ## Automation modes (conceptual)
 - Default: open PRs for human review (do not auto-merge).
 - Full-auto (if enabled by Verity UI): may open PRs and trigger deploy workflows, but still must respect GitHub Environment approvals and safety guardrails.
+
+<!-- verity:agents-structure:start -->
+## Repository Structure
+
+**Project Type**: `FRONTEND`
+
+**Stack**:
+- Frontend: `react`
+
+**Code Locations**:
+- Frontend code: `src`
+- Shared code: `scripts`
+
+**Routing Guidance**:
+- This is a frontend-only repository.
+- All UI, styling, and client-side logic changes go here.
+<!-- verity:agents-structure:end -->
