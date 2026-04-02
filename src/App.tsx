@@ -14,8 +14,27 @@ import { Sponsors } from "./components/Sponsors";
 import { Team } from "./components/Team";
 import { Testimonials } from "./components/Testimonials";
 import "./App.css";
+import { useWidgetUser } from './useWidget';
+
 
 function App() {
+  const user = {
+    id:"as",
+    name:"amish",
+    email:"email@mail.com"
+    role:"admin",
+  }
+  useWidgetUser(user ? {
+    id: user.id,
+    name: user.name,
+    email: user.email,
+    role: user.role,
+    tenant: user.tenant ? {
+      id: user.tenant.id,
+      name: user.tenant.name
+    } : undefined
+  } : null);
+  
   return (
     <>
       <Navbar />
